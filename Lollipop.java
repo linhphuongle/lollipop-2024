@@ -9,10 +9,12 @@ import java.awt.Color; //Use different colours
 public class Lollipop
 {
     // instance variables 
+    /*
     private static final double XPOS = 300.0;   //horizonatal center of lollipop
     private static final double YPOS = 180.0;   //vertical center of lollopop
     private static final double STICK = 200.0;  // length of lollipop stick
     private static final double SIZE = 80.0;    //size of lollipop
+    */
 
     /**
      * Constructor for objects of class Lollipop
@@ -51,10 +53,14 @@ public class Lollipop
      * 
      */
     public void drawLollipops (){
-        this.doDrawLollipop(300, 180, 80, 200);  
-        this.doDrawLollipop(100, 50, 20, 200);  
-        this.doDrawLollipop(200, 100, 50, 100);  
-        this.doDrawLollipop(400, 160, 80, 300);  
+        //Aks user for diameter
+        double diameter = UI.askDouble ("Diameter: ");
+        
+        
+        this.doDrawLollipop(300, 180, diameter, 200);  
+        this.doDrawLollipop(100, 80, diameter/3, 30);  
+        this.doDrawLollipop(200, 100, diameter/2, 100);  
+        this.doDrawLollipop(400, 160, diameter/2, 100);  
     }
 }
 
